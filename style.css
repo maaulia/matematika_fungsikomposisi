@@ -991,7 +991,7 @@ footer {
 
 .materi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1rem; }
 .materi-card {
-  background: linear-gradient(145deg, #e4abce, #f19cc0); border: 1px solid rgba(#f4abdd);
+  background: linear-gradient(145deg, #e4abbb, #f19cb8); border: 1px solid rgba(#f4abb6);
   border-radius: 14px; padding: 1.75rem;
 }
 .materi-card h4 {
