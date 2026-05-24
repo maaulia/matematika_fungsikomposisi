@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MatIka — Fungsi Komposisi</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    SMKN 7 Semarang &bull; XI SIJA 2 &bull; Rahma Aulia Putri (29)
+  </div>
+
+  <!-- NAVBAR -->
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">
+          <div class="logo-box">f∘g</div>
+          <div class="logo-text">
+            <h1>MatIka</h1>
+            </div>
+        </div>
+        <div class="nav-links">
+          <a href="#konsep">Konsep</a>
+          <a href="#materi">Materi</a>
+          <a href="#sifat">Sifat</a>
+          <a href="#subtopik">Sub-topik</a>
+          <a href="#video">Video</a>
+          <a href="#quiz">Quiz</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ── HERO ── -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-wrap">
+        <div>
+          <div class="badge">Interactive Mathematics &bull; Kelas XI</div>
+          <h2>Memahami <span>Fungsi Komposisi</span> dengan Lebih Mudah</h2>
+          <p>
+            Pelajari konsep fungsi komposisi mulai dari dasar hingga latihan soal interaktif —
+            dari domain & range, hingga kaitannya dengan fungsi invers.
+          </p>
+          <div class="hero-btns">
+            <a href="#konsep" class="btn btn-primary">Mulai Belajar</a>
+            <a href="#quiz" class="btn btn-outline">Kerjakan Quiz</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <small>NOTASI FUNGSI</small>
+          <div class="formula">(f ∘ g)(x)</div>
+          <p>Fungsi komposisi menggabungkan dua fungsi menjadi fungsi baru.</p>
+          <div class="flow">
+            <div>x</div>
+            <div>g(x)</div>
+            <div>f(g(x))</div>
+            <div class="out">hasil</div>
+          </div>
+          <div class="hero-stats">
+            <div class="hs"><div class="hs-val">2</div><div class="hs-lbl">fungsi input</div></div>
+            <div class="hs"><div class="hs-val">1</div><div class="hs-lbl">output baru</div></div>
+            <div class="hs"><div class="hs-val">∞</div><div class="hs-lbl">kemungkinan</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── KONSEP ── -->
+  <section id="konsep">
+    <div class="container">
+
+      <div class="section-title reveal">
+        <small>DASAR TEORI</small>
+        <h3>Apa itu Fungsi Komposisi?</h3>
+        <p>
+          Fungsi komposisi adalah operasi yang menggabungkan dua fungsi sedemikian rupa sehingga
+          output dari fungsi pertama menjadi input fungsi kedua. Hasilnya adalah sebuah fungsi baru.
+        </p>
+      </div>
+
+      <div class="grid">
+        <div class="card reveal reveal-delay-1">
+          <div class="icon">📥</div>
+          <h4>Fungsi Dalam — g(x)</h4>
+          <p>Fungsi pertama yang dikerjakan. Menerima nilai x asli sebagai input dan menghasilkan g(x). Disebut "fungsi dalam" karena berada di dalam tanda kurung f(...).</p>
+          <div class="card-formula">g : A → B<br>x ↦ g(x)</div>
+        </div>
+        <div class="card reveal reveal-delay-2">
+          <div class="icon">🔄</div>
+          <h4>Proses Komposisi</h4>
+          <p>Output g(x) "dioper" menjadi input untuk f. Bayangkan seperti dua mesin tersambung: mesin pertama memproses bahan mentah, hasilnya masuk ke mesin kedua.</p>
+          <div class="card-formula">(f∘g)(x) = f(g(x))<br>dibaca: "f bundaran g dari x"</div>
+        </div>
+        <div class="card reveal reveal-delay-3">
+          <div class="icon">📤</div>
+          <h4>Fungsi Luar — f(x)</h4>
+          <p>Fungsi kedua yang menerima g(x) sebagai inputnya. Disebut "fungsi luar" karena membungkus g dari luar. Menghasilkan nilai akhir dari keseluruhan komposisi.</p>
+          <div class="card-formula">f : B → C<br>g(x) ↦ f(g(x))</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── MATERI — DOMAIN & RANGE (bg dark) ── -->
+  <section id="materi" class="section-dark">
+    <div class="container">
+
+      <div class="section-title reveal">
+        <small>KONSEP LANJUTAN</small>
+        <h3>Domain, Range & Syarat Komposisi</h3>
+        <p>Sebelum menyusun fungsi komposisi, penting memahami domain dan range agar fungsi yang terbentuk valid.</p>
+      </div>
+
+      <div class="materi-grid">
+        <div class="materi-card reveal reveal-delay-1">
+          <h4>Domain Komposisi <span>D(f∘g)</span></h4>
+          <p>Domain dari (f∘g) adalah himpunan semua x di domain g, sedemikian sehingga g(x) berada di domain f. Tidak semua x yang valid di g otomatis valid di komposisi.</p>
+          <div class="materi-formula">D(f∘g) = { x ∈ D(g) | g(x) ∈ D(f) }</div>
+        </div>
+        <div class="materi-card reveal reveal-delay-2">
+          <h4>Range Komposisi <span>R(f∘g)</span></h4>
+          <p>Range dari (f∘g) adalah himpunan semua nilai f(g(x)) untuk x yang valid. Range komposisi adalah subset dari range f, bukan seluruh range f.</p>
+          <div class="materi-formula">R(f∘g) ⊆ R(f)</div>
+        </div>
+        <div class="materi-card reveal reveal-delay-1">
+          <h4>Syarat Komposisi <span>penting!</span></h4>
+          <p>Agar komposisi (f∘g) terdefinisi, syarat yang harus dipenuhi:</p>
+          <ul class="materi-list">
+            <li>Range g harus subset dari domain f: R(g) ⊆ D(f)</li>
+            <li>Setiap output g(x) harus bisa menjadi input yang valid untuk f</li>
+            <li>Jika tidak terpenuhi, domain komposisi perlu dibatasi</li>
+          </ul>
+        </div>
+        <div class="materi-card reveal reveal-delay-2">
+          <h4>Contoh Domain <span>kasus nyata</span></h4>
+          <p>Misal f(x) = √x (butuh x ≥ 0) dan g(x) = x − 3. Maka (f∘g)(x) = √(x−3) hanya valid jika x−3 ≥ 0, sehingga:</p>
+          <div class="materi-formula">D(f∘g) = { x | x ≥ 3 } = [3, ∞)</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── SIFAT ── -->
+  <section id="sifat" class="section-mid">
+    <div class="container">
+
+      <div class="section-title reveal">
+        <small>TEORI</small>
+        <h3>Sifat Fungsi Komposisi</h3>
+        <p>Empat sifat penting yang wajib kamu pahami — bukan sekadar dihapal!</p>
+      </div>
+
+      <div class="sifat-grid">
+        <div class="sifat-card sc-rose reveal reveal-delay-1">
+          <p class="sifat-num">Sifat 01</p>
+          <h4>Tidak Komutatif</h4>
+          <p>Urutan penulisan sangat menentukan hasil. Menukar posisi f dan g umumnya menghasilkan fungsi yang <em>berbeda</em>. Ini berbeda dengan penjumlahan atau perkalian biasa!</p>
+          <div class="sifat-formula">(f ∘ g)(x) ≠ (g ∘ f)(x)</div>
+          <p class="sifat-note">Contoh: f(x)=2x, g(x)=x+1 → f(g(x))=2x+2, g(f(x))=2x+1 ✗ sama</p>
+        </div>
+        <div class="sifat-card sc-gold reveal reveal-delay-2">
+          <p class="sifat-num">Sifat 02</p>
+          <h4>Asosiatif</h4>
+          <p>Untuk tiga fungsi, cara pengelompokan komposisi tidak memengaruhi hasil akhir. Kamu boleh menghitung pasangan manapun terlebih dahulu.</p>
+          <div class="sifat-formula">f ∘ (g ∘ h) = (f ∘ g) ∘ h</div>
+          <p class="sifat-note">Berlaku untuk tiga fungsi atau lebih, asalkan urutannya tidak berubah.</p>
+        </div>
+        <div class="sifat-card sc-lav reveal reveal-delay-1">
+          <p class="sifat-num">Sifat 03</p>
+          <h4>Elemen Identitas</h4>
+          <p>Fungsi identitas I(x) = x adalah elemen netral dalam komposisi. Mengkomposisikan fungsi apapun dengan I tidak mengubah fungsi tersebut.</p>
+          <div class="sifat-formula">f ∘ I = I ∘ f = f</div>
+          <p class="sifat-note">Analog dengan angka 1 dalam perkalian: a × 1 = 1 × a = a.</p>
+        </div>
+        <div class="sifat-card sc-wenge reveal reveal-delay-2">
+          <p class="sifat-num">Sifat 04</p>
+          <h4>Tidak Selalu Ada Invers</h4>
+          <p>Tidak semua fungsi komposisi memiliki invers. Invers (f∘g)⁻¹ ada jika dan hanya jika fungsi komposisinya bijektif (satu-satu dan onto).</p>
+          <div class="sifat-formula">(f∘g)⁻¹ = g⁻¹ ∘ f⁻¹</div>
+          <p class="sifat-note">Perhatikan: urutan invers terbalik! g⁻¹ di luar, f⁻¹ di dalam.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── SUB-TOPIK ── -->
+  <section id="subtopik">
+    <div class="container">
+
+      <div class="section-title reveal">
+        <small>TOPIK TERKAIT</small>
+        <h3>Invers Komposisi & Mencari Fungsi</h3>
+        <p>Pelajari kaitannya dengan fungsi invers dan teknik mencari fungsi yang tidak diketahui — sering keluar di ujian!</p>
+      </div>
+
+      <div class="subtopik-grid">
+        <div class="subtopik-card reveal reveal-delay-1">
+          <span class="st-badge">Fungsi Invers</span>
+          <h4>Mencari Invers dari Komposisi</h4>
+          <p>Jika diketahui komposisi dan salah satu fungsinya, kita bisa mencari fungsi yang lain. Teknik ini sering muncul di soal ujian!</p>
+          <div class="st-formula">(f∘g)⁻¹(x) = g⁻¹(f⁻¹(x))</div>
+          <p class="st-sub">Langkah mencari invers komposisi:</p>
+          <ul class="st-steps">
+            <li><span class="sn">1</span>Tentukan fungsi komposisi (f∘g)(x) terlebih dahulu</li>
+            <li><span class="sn">2</span>Misalkan y = (f∘g)(x), lalu tukar x dan y</li>
+            <li><span class="sn">3</span>Selesaikan persamaan untuk y — itulah (f∘g)⁻¹(x)</li>
+            <li><span class="sn">4</span>Verifikasi: (f∘g)(f∘g)⁻¹(x) = x ✓</li>
+          </ul>
+        </div>
+        <div class="subtopik-card reveal reveal-delay-2">
+          <span class="st-badge">Mencari Fungsi</span>
+          <h4>Menentukan f(x) atau g(x) yang Tidak Diketahui</h4>
+          <p>Soal tipe ini memberi kita komposisi dan salah satu fungsi, lalu meminta fungsi yang satunya. Strateginya adalah substitusi balik.</p>
+          <div class="st-formula">Jika (f∘g)(x) = h(x) dan g(x) diketahui,<br>maka f(g(x)) = h(x)</div>
+          <p class="st-sub">Langkah penyelesaian:</p>
+          <ul class="st-steps">
+            <li><span class="sn">1</span>Misalkan u = g(x), cari x dalam bentuk u</li>
+            <li><span class="sn">2</span>Substitusikan ke persamaan (f∘g)(x) = h(x)</li>
+            <li><span class="sn">3</span>Hasilnya adalah f(u) — ganti u dengan x</li>
+            <li><span class="sn">4</span>Verifikasi dengan substitusikan g(x) ke f yang ditemukan</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── VIDEO ── -->
+  <section id="video" class="section-mid">
+    <div class="container">
+      <div class="section-title reveal">
+        <small>VIDEO PEMBELAJARAN</small>
+        <h3>Belajar Lewat Video</h3>
+        <p>Klik card untuk mencari video referensi di YouTube sesuai topik yang ingin kamu pelajari.</p>
+      </div>
+      <div class="video-grid-3">
+        <div class="video-card3 reveal reveal-delay-1">
+          <a href="https://www.youtube.com/results?search_query=fungsi+komposisi+matematika+kelas+11" target="_blank" class="video-thumb3" style="background:linear-gradient(135deg,#482C3D,#8B445C);">
+            <div class="play-btn3">&#9654;</div>
+            <span class="thumb-label">PENJELASAN DASAR</span>
+          </a>
+          <div class="video-content3">
+            <small>KONSEP DASAR</small>
+            <h4>Fungsi Komposisi &mdash; Penjelasan Lengkap</h4>
+            <p>Mulai dari pengertian, cara menghitung, hingga contoh soal yang sering keluar di ujian.</p>
+            <a href="https://www.youtube.com/results?search_query=fungsi+komposisi+matematika+kelas+11" target="_blank" class="yt-link3">&#9835; Cari di YouTube &#8599;</a>
+          </div>
+        </div>
+        <div class="video-card3 reveal reveal-delay-2">
+          <a href="https://www.youtube.com/results?search_query=domain+range+fungsi+komposisi+kelas+11" target="_blank" class="video-thumb3" style="background:linear-gradient(135deg,#735453,#A38893);">
+            <div class="play-btn3">&#9654;</div>
+            <span class="thumb-label">DOMAIN &amp; RANGE</span>
+          </a>
+          <div class="video-content3">
+            <small>DOMAIN &amp; RANGE</small>
+            <h4>Menentukan Domain Fungsi Komposisi</h4>
+            <p>Cara mencari domain (fog) ketika melibatkan akar kuadrat, pecahan, dan fungsi lainnya.</p>
+            <a href="https://www.youtube.com/results?search_query=domain+range+fungsi+komposisi+kelas+11" target="_blank" class="yt-link3">&#9835; Cari di YouTube &#8599;</a>
+          </div>
+        </div>
+        <div class="video-card3 reveal reveal-delay-3">
+          <a href="https://www.youtube.com/results?search_query=invers+fungsi+komposisi+kelas+11" target="_blank" class="video-thumb3" style="background:linear-gradient(160deg,#3A1F2D,#482C3D);">
+            <div class="play-btn3">&#9654;</div>
+            <span class="thumb-label">INVERS KOMPOSISI</span>
+          </a>
+          <div class="video-content3">
+            <small>INVERS KOMPOSISI</small>
+            <h4>Invers dari Fungsi Komposisi</h4>
+            <p>Memahami hubungan antara fungsi invers dan komposisi, serta cara menghitung invers langkah demi langkah.</p>
+            <a href="https://www.youtube.com/results?search_query=invers+fungsi+komposisi+kelas+11" target="_blank" class="yt-link3">&#9835; Cari di YouTube &#8599;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── QUIZ ── -->
+  <section id="quiz">
+    <div class="container">
+
+      <div class="section-title reveal">
+        <small>QUIZ INTERAKTIF</small>
+        <h3>Latihan Pilihan Ganda</h3>
+        <p>Jawab satu per satu — setelah menjawab, soal berikutnya akan muncul otomatis.</p>
+      </div>
+
+      <div class="quiz-wrapper reveal">
+        <div class="quiz-progress-bar">
+          <div class="quiz-progress-fill" style="width:0%"></div>
+        </div>
+
+        <div class="quiz-box">
+          <div class="quiz-slide">
+            <div class="quiz-num"></div>
+            <div class="quiz-question"></div>
+            <div class="options">
+              <button></button><button></button><button></button><button></button>
+            </div>
+            <div class="quiz-feedback"></div>
+            <button class="quiz-next">Soal Berikutnya →</button>
+          </div>
+          <div class="quiz-slide"><div class="quiz-num"></div><div class="quiz-question"></div><div class="options"><button></button><button></button><button></button><button></button></div><div class="quiz-feedback"></div><button class="quiz-next"></button></div>
+          <div class="quiz-slide"><div class="quiz-num"></div><div class="quiz-question"></div><div class="options"><button></button><button></button><button></button><button></button></div><div class="quiz-feedback"></div><button class="quiz-next"></button></div>
+          <div class="quiz-slide"><div class="quiz-num"></div><div class="quiz-question"></div><div class="options"><button></button><button></button><button></button><button></button></div><div class="quiz-feedback"></div><button class="quiz-next"></button></div>
+          <div class="quiz-slide"><div class="quiz-num"></div><div class="quiz-question"></div><div class="options"><button></button><button></button><button></button><button></button></div><div class="quiz-feedback"></div><button class="quiz-next"></button></div>
+          <div class="quiz-slide"><div class="quiz-num"></div><div class="quiz-question"></div><div class="options"><button></button><button></button><button></button><button></button></div><div class="quiz-feedback"></div><button class="quiz-next"></button></div>
+          <div class="quiz-slide"><div class="quiz-num"></div><div class="quiz-question"></div><div class="options"><button></button><button></button><button></button><button></button></div><div class="quiz-feedback"></div><button class="quiz-next"></button></div>
+          <div class="quiz-slide"><div class="quiz-num"></div><div class="quiz-question"></div><div class="options"><button></button><button></button><button></button><button></button></div><div class="quiz-feedback"></div><button class="quiz-next"></button></div>
+          <div class="quiz-slide"><div class="quiz-num"></div><div class="quiz-question"></div><div class="options"><button></button><button></button><button></button><button></button></div><div class="quiz-feedback"></div><button class="quiz-next"></button></div>
+          <div class="quiz-slide"><div class="quiz-num"></div><div class="quiz-question"></div><div class="options"><button></button><button></button><button></button><button></button></div><div class="quiz-feedback"></div><button class="quiz-next"></button></div>
+
+          <div class="quiz-score">
+            <div class="score-emoji">🏆</div>
+            <div class="score-title">Quiz Selesai!</div>
+            <div class="score-num">0 / 10</div>
+            <div class="score-sub"></div>
+            <button class="quiz-restart">🔄 Ulangi Quiz</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="footer-wrap">
+      <h4>MatIka</h4>
+      <p>Website Pembelajaran Matematika Interaktif</p>
+      <ul class="footer-links">
+        <li><a href="#konsep">Konsep</a></li>
+        <li><a href="#sifat">Sifat</a></li>
+        <li><a href="#subtopik">Sub-topik</a></li>
+        <li><a href="#video">Video</a></li>
+        <li><a href="#quiz">Quiz</a></li>
+      </ul>
+      <div class="footer-divider"></div>
+      <div class="footer-socials">
+        <a href="#" class="social-btn" title="TikTok">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z"/></svg>
+        </a>
+        <a href="#" class="social-btn" title="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="#" class="social-btn" title="WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+        </a>
+      </div>
+      <div class="footer-bottom">
+        Matematika Kelas XI &nbsp;&bull;&nbsp; Fungsi Komposisi
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
